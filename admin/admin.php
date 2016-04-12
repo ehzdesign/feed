@@ -1,5 +1,3 @@
-
-
 <?php require_once('../includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
 <?php include(ROOT_PATH . 'database/database_connect.php') ?>
