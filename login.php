@@ -6,26 +6,39 @@
 
   <div class="col s12">
 
-    <form action="<?php echo BASE_URL; ?>login-form.php" method="post">
+    <form action="<?php echo BASE_URL; ?>forms/login-action.php" method="post">
 
       <div class="row">
 
        <div class="input-field col s12">
 
         <input id="username" name="f_username" type="text" class="validate">
-        <label for="username">Username</label>
+        <label for="username">*Username</label>
 
       </div>
 
 
     </div>
 
+      <div class="row">
+
+       <div class="input-field col s12">
+
+        <input id="email" name="f_email" type="email" class="validate" required>
+        <label for="email">*email</label>
+
+      </div>
+
+
+    </div>
+
+
     <div class="row">
 
      <div class="input-field col s12">
 
       <input id="password" name="f_password" type="password" class="validate">
-      <label for="password">Password</label>
+      <label for="password">*Password</label>
 
     </div>
 

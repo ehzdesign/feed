@@ -1,5 +1,6 @@
 <?php require_once('../includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
+<?php include('login-check.php') ?>
 <?php include(ROOT_PATH . 'database/database_connect.php') ?>
 
 
@@ -27,5 +28,7 @@ $result = $db_connection->query('SELECT * FROM Post');
 
   <?php endwhile; ?>
 </ul>
+
+<li><a href="logout.php">Logout</a></li>
 
 <?php include(ROOT_PATH . 'includes/footer.php') ?>

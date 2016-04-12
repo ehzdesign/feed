@@ -21,6 +21,17 @@
 
   ");
 
+  // $db_connection->query("
+  //     CREATE TABLE User(
+  //       ID INT AUTO_INCREMENT,
+  //       name
+
+
+  //     )
+
+
+  // ");
+
 
 
  ?>

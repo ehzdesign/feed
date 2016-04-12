@@ -19,6 +19,9 @@ if(isset($_POST['btn-signup']))
  $email = mysql_real_escape_string($_POST['email']);
  $upass = md5(mysql_real_escape_string($_POST['pass']));
 
+ // password hash
+$upass = password_hash('password', PASSWORD_DEFAULT);
+
  if(mysql_query("INSERT INTO users(username,email,password) VALUES('$uname','$email','$upass')"))
  {
   ?>
