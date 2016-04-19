@@ -23,6 +23,30 @@
   $statement->execute();
 
 
+  //update thumbnail
+  if(!empty($_FILES['f_image']['name'])){
+
+    move_uploaded_file(
+
+      $_FILES['f_image']['tmp_name'],
+      '../uploads' . $_FILES['f_image']['name']
+     );
+
+    $statement->$db_connection->prepare(
+      "UPDATE Post SET image=? WHERE id=?"
+    );
+
+    //replace?
+    $statement->bindParam(1, $_FILES['f_image']['name']);
+    $statement->bindParam(2, $_POST['f_id'],PDO::PARAM_INT);
+
+    //execute
+    $statement->execute();
+
+
+  }
+
+
  ?>
 
 
