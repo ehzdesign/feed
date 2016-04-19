@@ -1,5 +1,5 @@
-<?php
-  if($_SESSION['flag'] != TRUE){
+<?php session_start();
+  if(empty($_SESSION['username'])){
     header('location:../index.php');
     exit();
   }

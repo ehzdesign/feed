@@ -1,5 +1,4 @@
-<?php session_start() ?>
-<!DOCTYPE html>
+<?php session_start() ?><!DOCTYPE html>
 <html>
 <head>
   <!--Import Google Icon Font-->
