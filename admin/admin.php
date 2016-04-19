@@ -7,7 +7,7 @@
 
 <ul class="nav--admin">
   <li>
-    <a href="add_post.php">add post</a>
+    <a href="add-post.php">add post</a>
   </li>
 </ul>
 

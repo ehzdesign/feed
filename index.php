@@ -12,15 +12,26 @@
 <main class="container">
   <div class="row">
 <!-- use to gran individual information from each post -->
- <?php while ($item = $result->fetch_assoc()): ?>
+<?php while ($item = $result->fetch_assoc()): ?>
 
 <!-- PDO WAY -->
-<?php //while($item = $statement->fetch_assoc) ?>
+  <?php //while($item = $result->fetch(PDO::FETCH_ASSOC)): ?>
+
 
  <div class="col s12 m6 l4">
    <div class="card  medium z-depth-1">
     <div class="card-image">
-      <img src="uploads/<?php echo $item['thumbnail_Image']?>" alt="">
+
+    <?php if(!empty($item['image'])): ?>
+      <img src="uploads/<?php echo $item['image']?>" alt="">
+
+    <?php else: ?>
+
+    <img src="uploads/<?php echo $item['thumbnail_Image']?>" alt="">
+
+    <?php endif; ?>
+
+
     </div>
     <div class="card-action">
       <a href="post.php?ID=<?php echo $item['ID'] ?>"><small>view</small></a>
