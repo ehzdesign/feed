@@ -1,6 +1,6 @@
 <?php include('includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
-<?php include(ROOT_PATH . 'database/database_connect.php') ?>
+<?php include(ROOT_PATH . 'database/database-connect.php') ?>
 
 <?php
 

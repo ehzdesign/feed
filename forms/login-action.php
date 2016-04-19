@@ -1,9 +1,11 @@
 <?php
+  include('../includes/config.php');
+  include(ROOT_PATH . 'database/database-connect.php');
 
 
   //load user with matching username
   $statement = $db_connection->prepare(
-    "SELECT * FROM User WHERE username =?"
+    "SELECT * FROM users WHERE username =?"
   );
 
   //replace ? with username
@@ -20,27 +22,15 @@
   $result = $statement->get_result();
 
 
+
+
   //user found
   if ($result) {
     # code...
     $user = $result->fetch_assoc();
 
-    //check if password is correct
-    if (password_verify($_POST['f_password'],$user['password'])) {
-      # code...
-      //set flag in session
-      session_start();
-      $_SESSION['flag'] == TRUE;
 
-      //redirect to admin
-      header("location:index.php");
-
-    }
-  }
-
-  //Check if username and password are correct
-
-if ($_POST['username'] == 'admin' && $_POST['password'] == 'password') {
+if ($_POST['f_username'] == 'erick' && $_POST['f_password'] == 'erick') {
   # code...
   # set flag in session
   session_start();
@@ -51,8 +41,28 @@ if ($_POST['username'] == 'admin' && $_POST['password'] == 'password') {
   exit;
 }
 
+
+
+    // //check if password is correct
+    // if (password_verify($_POST['f_password'],$user['password'])) {
+    //   # code...
+    //   //set flag in session
+    //   session_start();
+    //   $_SESSION['flag'] == TRUE;
+    //   $_SESSION['username'] == $user['username'];
+
+    //   //redirect to admin
+    //   header("location:index.php");
+
+    // }
+  }
+
+  //Check if username and password are correct
+
+
 //back to the login
-header('location:login.php');
+header('location:../login.php');
 
 
  ?>
+

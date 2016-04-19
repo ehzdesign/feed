@@ -1,7 +1,7 @@
 <?php require_once('../includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
 <?php include('login-check.php') ?>
-<?php include(ROOT_PATH . 'database/database_connect.php') ?>
+<?php include(ROOT_PATH . 'database/database-connect.php') ?>
 
 
 <section id="add post">
@@ -15,7 +15,7 @@
 
 
    <div class="row">
-    <form action="<?php echo BASE_URL; ?>forms/add_post.php" method="post" enctype="multipart/form-data">
+    <form action="<?php echo BASE_URL; ?>forms/add-action.php" method="post" enctype="multipart/form-data">
       <!-- upload image for post -->
       <div class="file-field input-field">
         <div class="btn">

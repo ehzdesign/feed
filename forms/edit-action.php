@@ -1,6 +1,6 @@
 <?php require_once('../includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
-<?php include(ROOT_PATH . 'database/database_connect.php') ?>
+<?php include(ROOT_PATH . 'database/database-connect.php') ?>
 
 
 <?php
@@ -10,13 +10,12 @@
   );
 
   // replace ?
-  $statement->prepare(
-    's,s,s,s,i',
+  $statement->bind_param(
+    "ssssi",
     $_POST['f_title'],
     $_POST['f_body'],
     $_POST['f_price'],
     $_POST['f_location'],
-    $_POST['f_body'],
     $_POST['f_id']
 
   );

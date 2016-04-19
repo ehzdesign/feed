@@ -1,7 +1,7 @@
 <?php
 require_once('../includes/config.php');
 //check directory path
-include(ROOT_PATH . 'database/database_connect.php');
+include(ROOT_PATH . 'database/database-connect.php');
 
 
 

@@ -1,6 +1,6 @@
 <?php require_once('includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
-<?php include('database/database_connect.php') ?>
+<?php include('database/database-connect.php') ?>
 
 <?php
 
@@ -8,14 +8,14 @@
  $result = $db_connection->query('SELECT * FROM Post');
 
  ?>
-<a href="admin/admin.php">admin</a>
 
-
-<?php //echo 'favorite color is ' . $_SESSION["username"]; ?>
 <main class="container">
   <div class="row">
 <!-- use to gran individual information from each post -->
  <?php while ($item = $result->fetch_assoc()): ?>
+
+<!-- PDO WAY -->
+<?php //while($item = $statement->fetch_assoc) ?>
 
  <div class="col s12 m6 l4">
    <div class="card  medium z-depth-1">

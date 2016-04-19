@@ -1,47 +1,8 @@
 <?php require_once('includes/config.php') ?>
-<?php include(ROOT_PATH . 'includes/header.php') ?>
+<?php require_once(ROOT_PATH . 'includes/header.php') ?>
 
 
 
-<?php
-
-
-include(ROOT_PATH . 'database/database_connect.php');
-
-if(isset($_SESSION['user'])!="")
-{
- header("Location: index.php");
-}
-
-
-if(isset($_POST['register']))
-{
- $f_username = mysql_real_escape_string($_POST['f_username']);
- $f_email = mysql_real_escape_string($_POST['f_email']);
- $f_password = md5(mysql_real_escape_string($_POST['f_password']));
-
- $statement = $db_connection->prepare(
-
-  "INSERT INTO users(username, password, email) VALUES (?, ?, ?)"
-
-  );
-
-
- $statement->bind_param(
-  "sss",
-  $_POST['f_username'],
-  $_POST['f_password'],
-  $_POST['f_email']
-
-  );
-
- $statement->execute();
-
-
-}
-
-
-?>
 
 <main class="container main-content">
 
@@ -52,7 +13,7 @@ if(isset($_POST['register']))
 
       <p>Create an account</p>
 
-      <form  method="post">
+      <form  method="post" action="<?php echo BASE_URL; ?>forms/register-action.php">
 
         <div class="row">
 

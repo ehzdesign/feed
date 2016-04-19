@@ -2,7 +2,7 @@
 
 <?php require_once('../includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
-<?php include(ROOT_PATH . 'templates/database_connect.php') ?>
+<?php include(ROOT_PATH . 'templates/database-connect.php') ?>
 
 
 <?php

@@ -4,13 +4,13 @@
 
   <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'): ?>
 
-    <a href="<?php echo BASE_URL;?>admin/add_post.php " class="btn-floating btn-large waves-light waves-effect grey darken-3">
+    <a href="<?php echo BASE_URL;?>admin/add-post.php " class="btn-floating btn-large waves-light waves-effect grey darken-3 tooltipped" data-position="left" data-delay="50" data-tooltip="add post">
       <i class="large material-icons">add</i>
     </a>
 
   <?php else: ?>
 
-    <a href="<?php echo BASE_URL;?>index.php " class="btn-floating btn-large waves-light waves-effect grey darken-3">
+    <a href="<?php echo BASE_URL;?>index.php " class="btn-floating btn-large waves-light waves-effect grey darken-3 tooltipped" data-position="left" data-delay="50" data-tooltip="feed">
       <i class="large material-icons">dashboard</i>
     </a>
 
@@ -47,6 +47,8 @@
       $("#image").change(function(){
         readURL(this);
       });
+      $('#body').val('<?php echo $item['body'] ?>');
+      $('#body').trigger('autoresize');
     </script>
 
   </body>

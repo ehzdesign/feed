@@ -1,7 +1,7 @@
 <?php
 
 //connect to db
-  include('database_connect.php');
+  include('database-connect.php');
 
 //add tables to db
 
