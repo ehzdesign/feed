@@ -19,18 +19,30 @@
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
 
+
+
+
       <?php if (isset($_SESSION['username']) && $_SESSION['username']!=""):?>
+
+       <?php $result = $db_connection->query('SELECT * FROM users WHERE username = "'.$_SESSION["username"].'"'); ?>
 
 
         <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
 
 
+
+        <?php while ($item = $result->fetch_assoc()): ?>
+
+
+
         <div class="chip grey lighten-4">
          <a href="<?php echo BASE_URL; ?>admin/admin.php">
-          <img class="responsive-img" src="<?php echo BASE_URL; ?>uploads/profile.png" alt="profile image">
+          <img class="responsive-img" src="<?php echo BASE_URL; ?>uploads/user_image/<?php echo $item['profile_image']; ?>" alt="profile image">
           <?php echo '@'.$_SESSION['username'] ?>
         </a>
       </div>
+
+    <?php endwhile; ?>
 
       <!-- delay logout until toast message goes away -->
       <li><a onclick="Materialize.toast('see ya later!', 2000,'',function(){location.href = '<?php echo BASE_URL; ?>forms/logout-action.php';})">Logout</a></li>
