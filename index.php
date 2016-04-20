@@ -22,12 +22,12 @@
    <div class="card  medium z-depth-1">
     <div class="card-image">
 
-    <?php if(!empty($item['image'])): ?>
-      <img src="uploads/<?php echo $item['image']?>" alt="">
+    <?php if(!empty($item['large_Image'])): ?>
+      <img src="uploads/<?php echo $item['large_Image']?>" alt="">
 
     <?php else: ?>
 
-    <img src="uploads/<?php echo $item['thumbnail_Image']?>" alt="">
+    <img src="uploads/panda.jpg" alt="">
 
     <?php endif; ?>
 
