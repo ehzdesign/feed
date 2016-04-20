@@ -12,8 +12,19 @@
 </ul>
 
 <?php
-  //query all content
-$result = $db_connection->query('SELECT * FROM Post');
+
+$statement = $db_connection->prepare("SELECT * FROM Post WHERE user_id =?");
+
+$statement->bind_param(
+  "s" ,  //Type of data (i = integer, d=decimal, s = string)
+  $_SESSION['user_id'] //value to replace ? with
+  );
+
+ //run sql query
+  $statement->execute();
+
+  $result = $statement->get_result();
+
 
 ?>
 

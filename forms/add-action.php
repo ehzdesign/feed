@@ -88,6 +88,8 @@ $statement->execute();
 
  <!-- give confirm message -->
 
+
+
  <h1>you have added post successfully</h1>
 
  <!-- return back to main page -->

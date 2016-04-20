@@ -45,7 +45,7 @@ $item = $result->fetch_assoc();
 
 
     <!-- image preview of what user will upload -->
-    <img id="preview" class="materialboxed" width="250" src="<?php echo BASE_URL; ?>uploads/food_placeholder.gif">
+    <img id="preview" class="materialboxed" width="250" src="<?php echo BASE_URL; ?>uploads/<?php echo $item['image'] ?>">
 
 
 
