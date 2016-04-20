@@ -57,10 +57,6 @@
 
 
 
-
-
-
-
     <div class="chip grey lighten-4">
      <img class="responsive-img" src="uploads/profile.png" alt="profile image">
      <?php echo '@'.$_SESSION['username'] ?>
