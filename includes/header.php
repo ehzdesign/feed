@@ -11,7 +11,7 @@
 <body>
  <nav class="main-nav">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">yumme</a>
+    <a href="#" class="brand-logo">yum<strong>me</strong></a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
