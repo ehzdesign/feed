@@ -19,15 +19,18 @@
       <?php if (isset($_SESSION['username']) && $_SESSION['username']!=""):?>
 
 
-      <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
+        <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
 
-       <div class="chip grey lighten-4">
-           <img class="responsive-img" src="<?php echo BASE_URL; ?>uploads/profile.png" alt="profile image">
-           <?php echo '@'.$_SESSION['username'] ?>
-       </div>
 
-      <!-- delay logout until toast message goes away -->
-      <li><a onclick="Materialize.toast('see ya later!', 2000,'',function(){location.href = '<?php echo BASE_URL; ?>forms/logout-action.php';})">Logout</a></li>
+          <div class="chip grey lighten-4">
+           <a href="<?php echo BASE_URL; ?>admin/admin.php">
+            <img class="responsive-img" src="<?php echo BASE_URL; ?>uploads/profile.png" alt="profile image">
+            <?php echo '@'.$_SESSION['username'] ?>
+        </a>
+          </div>
+
+        <!-- delay logout until toast message goes away -->
+        <li><a onclick="Materialize.toast('see ya later!', 2000,'',function(){location.href = '<?php echo BASE_URL; ?>forms/logout-action.php';})">Logout</a></li>
 
       <?php else: ?>
 
@@ -40,29 +43,29 @@
 
     </ul>
     <ul class="side-nav" id="mobile-demo">
-       <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
+     <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
 
 
-      <?php if (isset($_SESSION['username']) && $_SESSION['username']!=""):?>
+     <?php if (isset($_SESSION['username']) && $_SESSION['username']!=""):?>
 
       <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
 
       <div class="chip grey lighten-4">
-           <img class="responsive-img" src="uploads/profile.png" alt="profile image">
-           <?php echo '@'.$_SESSION['username'] ?>
-       </div>
+       <img class="responsive-img" src="uploads/profile.png" alt="profile image">
+       <?php echo '@'.$_SESSION['username'] ?>
+     </div>
 
-      <li><a href="<?php echo BASE_URL; ?>login.php">Logout</a></li>
+     <li><a href="<?php echo BASE_URL; ?>login.php">Logout</a></li>
 
 
-        <?php else: ?>
+   <?php else: ?>
 
-        <li><a href="<?php echo BASE_URL; ?>login.php">Login</a></li>
+    <li><a href="<?php echo BASE_URL; ?>login.php">Login</a></li>
 
-      <?php endif; ?>
+  <?php endif; ?>
 
-    </ul>
-  </div>
+</ul>
+</div>
 </nav>
 
 
