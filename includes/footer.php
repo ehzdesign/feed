@@ -47,8 +47,7 @@
       $("#image").change(function(){
         readURL(this);
       });
-      $('#body').val('<?php echo $item['body'] ?>');
-      $('#body').trigger('autoresize');
+
     </script>
 
   </body>
