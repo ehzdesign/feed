@@ -39,6 +39,8 @@
       session_start();
 
       $_SESSION['username'] = $user['username'];
+      $_SESSION['user_id'] = $user['id'];
+
 
       //redirect to admin
        header('location:../index.php');

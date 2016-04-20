@@ -53,6 +53,7 @@ if(isset($_POST['register']))
     $user = $result->fetch_assoc();
     session_start();
     $_SESSION['username'] = $user['username'];
+    $_SESSION['user_id'] = $user['id'];
 
   }
 
