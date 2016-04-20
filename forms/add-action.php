@@ -22,14 +22,13 @@ if(!empty($_FILES['f_image']['name'])) {
     '../uploads/' . $filename
   );
 
-  $statement = $db_connection->prepare("INSERT INTO Post(large_Image) VALUES (?)");
+  $statement = $db_connection->prepare("INSERT INTO Post(image) VALUES (?)");
 
 
 $statement->bind_param("s", $filename);
 
-$statement->execute();
 
-  echo('file uploaded');
+
 
 }
 
@@ -55,19 +54,22 @@ $statement->execute();
 
 $statement = $db_connection->prepare(
 
-  "INSERT INTO Post(title, location, body, category, price) VALUES (?, ?, ?, ?, ?)"
+  "INSERT INTO Post(title, location, body, category, price, image, user_id) VALUES (?, ?, ?, ?, ?, ?, ?)"
 
 );
 
 
 
 $statement->bind_param(
-  "sssss",
+  "sssssss",
   $_POST['f_title'],
   $_POST['f_location'],
   $_POST['f_body'],
   $_POST['f_category'],
-  $_POST['f_price']
+  $_POST['f_price'],
+  $filename,
+  $_POST['f_id']
+
 
 );
 
@@ -89,7 +91,7 @@ $statement->execute();
  <h1>you have added post successfully</h1>
 
  <!-- return back to main page -->
- <a href="index.php"></a>
+ <a href="../index.php">click here</a>
 
 
 

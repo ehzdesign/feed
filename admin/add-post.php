@@ -79,6 +79,13 @@
       </div>
     </div>
 
+      <div class="row">
+          <div class="input-field col s12">
+            <!-- <i class="material-icons prefix">location_on</i> -->
+            <input id="id" name="f_id" type="hidden" value="<?php echo $_SESSION['user_id']; ?>">
+          </div>
+        </div>
+
    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button>

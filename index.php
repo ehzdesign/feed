@@ -22,8 +22,8 @@
    <div class="card  medium z-depth-1">
     <div class="card-image">
 
-    <?php if(!empty($item['large_Image'])): ?>
-      <img src="uploads/<?php echo $item['large_Image']?>" alt="">
+    <?php if(!empty($item['image'])): ?>
+      <img src="uploads/<?php echo $item['image']?>" alt="">
 
     <?php else: ?>
 

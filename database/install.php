@@ -14,8 +14,8 @@
       body TEXT,
       category VARCHAR(255),
       price VARCHAR(10),
-      thumbnail_Image VARCHAR(255),
-      large_Image VARCHAR(255),
+      image VARCHAR(255),
+      user_id VARCHAR(255),
       PRIMARY KEY(ID)
     )
 
