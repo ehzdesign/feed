@@ -1,6 +1,6 @@
-<?php session_start();
+<?php
   if(empty($_SESSION['username'])){
     header('location:../index.php');
     exit();
   }
- ?>
+?>

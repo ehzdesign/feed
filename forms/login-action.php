@@ -30,38 +30,28 @@
     $user = $result->fetch_assoc();
 
 
-if ($_POST['f_username'] == 'erick' && $_POST['f_password'] == 'erick') {
-  # code...
-  # set flag in session
-  session_start();
-  $_SESSION['flag'] == TRUE;
-
-  //redirect to index
-  header('location:index.php');
-  exit;
-}
-
-
 
     // //check if password is correct
-    // if (password_verify($_POST['f_password'],$user['password'])) {
-    //   # code...
-    //   //set flag in session
-    //   session_start();
-    //   $_SESSION['flag'] == TRUE;
-    //   $_SESSION['username'] == $user['username'];
+    if (password_verify($_POST['f_password'],$user['password'])) {
+      # code...
+      //set flag in session
+      header('location:../index.php');
+      session_start();
 
-    //   //redirect to admin
-    //   header("location:index.php");
+      $_SESSION['username'] = $user['username'];
 
-    // }
+      //redirect to admin
+       header('location:../index.php');
+       exit;
+    }
   }
 
   //Check if username and password are correct
 
 
 //back to the login
-header('location:../login.php');
+header('location:../register.php');
+
 
 
  ?>

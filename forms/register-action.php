@@ -13,7 +13,7 @@ if(isset($_POST['register']))
 {
  $f_username = mysql_real_escape_string($_POST['f_username']);
  $f_email = mysql_real_escape_string($_POST['f_email']);
- $f_password = password_hash('password', PASSWORD_DEFAULT);
+ $f_password = password_hash($_POST['f_password'], PASSWORD_DEFAULT);
 
  $statement = $db_connection->prepare(
 

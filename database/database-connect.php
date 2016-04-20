@@ -1,5 +1,4 @@
 <?php
-
   $db_connection = mysqli_connect(
 
     'localhost',
@@ -8,6 +7,4 @@
     'feedMeTest'
 
   ) or die ('Error connecting to database');
-
  ?>
-
