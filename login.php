@@ -20,18 +20,6 @@
 
     </div>
 
-      <div class="row">
-
-       <div class="input-field col s12">
-
-        <input id="email" name="f_email" type="email" class="validate" required>
-        <label for="email">*email</label>
-
-      </div>
-
-
-    </div>
-
 
     <div class="row">
 
