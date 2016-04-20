@@ -20,7 +20,7 @@
       <div class="file-field input-field">
         <div class="btn">
           <span>image</span>
-          <input id="image" name="f_image" type="file" accept="image/*" placeholder="upload your food image">
+          <input id="image" name="f_image" type="file" accept="image/*" placeholder="upload your food image" required>
         </div>
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text" placeholder="Upload your foodie image!">
@@ -44,7 +44,7 @@
      <div class="row">
       <div class="input-field col s12">
         <!-- <i class="material-icons prefix">location_on</i> -->
-        <input id="pac-input" name="f_location" placeholder="enter location" type="text" class="validate controls">
+        <input id="pac-input" name="f_location" placeholder="enter location" type="text" class="validate controls" required>
         <label for="pac-input">Location</label>
       </div>
     </div>
@@ -56,7 +56,7 @@
     <div class="row">
       <div class="input-field col s12">
         <!-- <i class="material-icons prefix">location_on</i> -->
-        <input id="meal-name" name="f_title" placeholder="ex. spicy salmon roll" type="text" class="validate">
+        <input id="meal-name" name="f_title" placeholder="ex. spicy salmon roll" type="text" class="validate" required>
         <label for="meal-name">Meal Name</label>
       </div>
     </div>
@@ -74,7 +74,7 @@
       <!-- body for post -->
       <div class="input-field col s12">
         <!-- <i class="material-icons prefix">insert_comment</i> -->
-        <textarea id="body" name="f_body" class="materialize-textarea" length="120"></textarea>
+        <textarea id="body" name="f_body" class="materialize-textarea" length="120" required></textarea>
         <label for="body">Share your experience!</label>
       </div>
     </div>

@@ -11,11 +11,29 @@
   </li>
 </ul>
 
-<?php
+<form action="<?php echo BASE_URL; ?>forms/edit-profile-action.php" method="post" enctype="multipart/form-data">
+  <!-- upload image for post -->
+  <div class="file-field input-field">
+    <div class="btn">
+      <span>image</span>
+      <input id="image" name="f_image" type="file" accept="image/*" placeholder="upload your food image" required>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="Upload your profile pic!">
+    </div>
+  </div>
 
-$statement = $db_connection->prepare("SELECT * FROM Post WHERE user_id =?");
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
 
-$statement->bind_param(
+  </form>
+
+  <?php
+
+  $statement = $db_connection->prepare("SELECT * FROM Post WHERE user_id =?");
+
+  $statement->bind_param(
   "s" ,  //Type of data (i = integer, d=decimal, s = string)
   $_SESSION['user_id'] //value to replace ? with
   );
@@ -26,10 +44,10 @@ $statement->bind_param(
   $result = $statement->get_result();
 
 
-?>
+  ?>
 
 
-<ul>
+  <ul>
 
 
    <?php while ($item = $result->fetch_assoc()): ?>

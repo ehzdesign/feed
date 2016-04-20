@@ -1,4 +1,7 @@
-<?php ob_start(); session_start() ?><!DOCTYPE html>
+<?php ob_start(); session_start() ?>
+<?php include(ROOT_PATH .'database/database-connect.php') ?>
+<!DOCTYPE html>
+
 <html>
 <head>
   <!--Import Google Icon Font-->
@@ -22,47 +25,55 @@
         <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
 
 
-          <div class="chip grey lighten-4">
-           <a href="<?php echo BASE_URL; ?>admin/admin.php">
-            <img class="responsive-img" src="<?php echo BASE_URL; ?>uploads/profile.png" alt="profile image">
-            <?php echo '@'.$_SESSION['username'] ?>
+        <div class="chip grey lighten-4">
+         <a href="<?php echo BASE_URL; ?>admin/admin.php">
+          <img class="responsive-img" src="<?php echo BASE_URL; ?>uploads/profile.png" alt="profile image">
+          <?php echo '@'.$_SESSION['username'] ?>
         </a>
-          </div>
+      </div>
 
-        <!-- delay logout until toast message goes away -->
-        <li><a onclick="Materialize.toast('see ya later!', 2000,'',function(){location.href = '<?php echo BASE_URL; ?>forms/logout-action.php';})">Logout</a></li>
+      <!-- delay logout until toast message goes away -->
+      <li><a onclick="Materialize.toast('see ya later!', 2000,'',function(){location.href = '<?php echo BASE_URL; ?>forms/logout-action.php';})">Logout</a></li>
 
-      <?php else: ?>
+    <?php else: ?>
 
-        <li><a href="<?php echo BASE_URL; ?>login.php">Login</a></li>
+      <li><a href="<?php echo BASE_URL; ?>login.php">Login</a></li>
 
-      <?php endif; ?>
-
-
+    <?php endif; ?>
 
 
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-     <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
 
 
-     <?php if (isset($_SESSION['username']) && $_SESSION['username']!=""):?>
-
-      <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
-
-      <div class="chip grey lighten-4">
-       <img class="responsive-img" src="uploads/profile.png" alt="profile image">
-       <?php echo '@'.$_SESSION['username'] ?>
-     </div>
-
-     <li><a href="<?php echo BASE_URL; ?>login.php">Logout</a></li>
+  </ul>
+  <ul class="side-nav" id="mobile-demo">
+   <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
 
 
-   <?php else: ?>
+   <?php if (isset($_SESSION['username']) && $_SESSION['username']!=""):?>
 
-    <li><a href="<?php echo BASE_URL; ?>login.php">Login</a></li>
+    <li><a href="<?php echo BASE_URL; ?>admin/admin.php">Admin</a></li>
 
-  <?php endif; ?>
+
+
+
+
+
+
+
+
+    <div class="chip grey lighten-4">
+     <img class="responsive-img" src="uploads/profile.png" alt="profile image">
+     <?php echo '@'.$_SESSION['username'] ?>
+   </div>
+
+   <li><a href="<?php echo BASE_URL; ?>login.php">Logout</a></li>
+
+
+ <?php else: ?>
+
+  <li><a href="<?php echo BASE_URL; ?>login.php">Login</a></li>
+
+<?php endif; ?>
 
 </ul>
 </div>
