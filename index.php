@@ -14,38 +14,36 @@
 <!-- use to gran individual information from each post -->
 <?php while ($item = $result->fetch_assoc()): ?>
 
-<!-- PDO WAY -->
-  <?php //while($item = $result->fetch(PDO::FETCH_ASSOC)): ?>
 
+<a href="post.php?ID=<?php echo $item['ID'] ?>">
 
- <div class="col s12 m6 l4">
-   <div class="card  medium z-depth-1">
-    <div class="card-image">
+<div class="col s12 m6 l4 col--home">
+
+ <div class="post-container--home">
+
+  <div class="overlay"></div>
+
 
     <?php if(!empty($item['image'])): ?>
-      <img src="uploads/<?php echo $item['image']?>" alt="">
+
+    <div class="post--home" style="background-image:url(uploads/<?php echo $item['image']?>)">
 
     <?php else: ?>
 
-    <img src="uploads/panda.jpg" alt="">
+    <div class="post--home" style="background-image:url(uploads/panda.jpg">
 
     <?php endif; ?>
 
+    <p class="post-title"><?php echo $item['title']; ?></p>
 
-    </div>
-    <div class="card-action">
-      <a href="post.php?ID=<?php echo $item['ID'] ?>"><small>view</small></a>
-    </div>
-      <p class=""><?php echo $item['title']; ?></p>
-      <p><?php echo $item['location']; ?></p>
-      <p><?php echo $item['category']; ?></p>
-      <p>$<?php echo $item['price']; ?></p>
-      <p><?php echo $item['body']; ?></p>
-      <a href="single-page.php?id=<?php echo $item['ID'] ?>"> </a>
-    </div>
+
  </div>
 
+ </div>
 
+ </div>
+
+</a>
 
 
 <?php endwhile; ?>

@@ -80,3 +80,53 @@ nav{
 
 
 /*=====  End of main-content  ======*/
+
+/*=================================
+=            post-home            =
+=================================*/
+
+.col--home{
+  margin-top: 1.3125em;
+}
+
+.post-container--home{
+
+  overflow: hidden;
+  position: relative;
+    .overlay{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.77), rgba(45, 45, 45, 0.04));
+    position: absolute;
+    z-index: 10;
+  }
+}
+
+.post--home{
+  height: 25em;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+
+
+  .post-title{
+
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 0.9em;
+    padding-bottom: 0.5em;
+    padding-left: 0.3em;
+    text-transform: capit;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    text-transform: lowercase;
+  }
+}
+
+
+
+/*=====  End of post-home  ======*/
+
