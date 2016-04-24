@@ -48,6 +48,12 @@
         readURL(this);
       });
 
+      var elems = $('.col--home');
+      elems.on('mouseenter mouseleave', function(e) {
+        elems.not(this).stop(true).fadeTo('fast', e.type=='mouseenter'?0.7:1);
+      });
+
+
     </script>
 
   </body>

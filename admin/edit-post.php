@@ -143,7 +143,7 @@ $item = $result->fetch_assoc();
 
   var my_var = <?php echo $item['body']; ?>;
 
-  $('materialize-textarea').val('fs');
+  $('materialize-textarea').val(my_var);
   $('materialize-textarea').trigger('autoresize');
 
 </script>

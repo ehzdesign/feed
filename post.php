@@ -26,7 +26,7 @@ $item = $result->fetch_assoc();
 
 $statement = $db_connection->prepare(
 
-    "SELECT username FROM users WHERE ID =?"
+    "SELECT * FROM users WHERE ID =?"
   );
 
 $statement->bind_param(
@@ -36,9 +36,9 @@ $statement->bind_param(
 
 $statement->execute();
 
-$username_result = $statement->get_result();
+$user_result = $statement->get_result();
 
-$post_username = $username_result->fetch_assoc();
+$post_user = $user_result->fetch_assoc();
 
 
 
@@ -52,8 +52,8 @@ $post_username = $username_result->fetch_assoc();
   <div class="row">
     <div class="col s12 l6">
     <div class="chip grey lighten-4">
-           <img class="responsive-img" src="uploads/profile.png" alt="profile image">
-           <?php echo '@' . $post_username['username']; ?>
+           <img class="responsive-img" src="uploads/user_image/<?php echo $post_user['profile_image']?>" alt="profile image">
+           <?php echo '@' . $post_user['username']; ?>
          </div>
       <img src="uploads/<?php echo $item['image']?>" alt="">
     </div>

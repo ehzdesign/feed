@@ -45,9 +45,10 @@ nav{
 .post-details {
 
   h1{
-    text-transform: capitalize;
-    font-size: 1.6em;
+    text-transform: lowercase;
+    font-size: 5em;
     margin-bottom: 1em;
+    font-weight: bold;
 
   }
 
@@ -102,6 +103,14 @@ nav{
   }
 }
 
+@keyframes fadeIn {
+  from { opacity:0;} to { opacity:1; }
+}
+
+@keyframes fadeInSlide {
+  from { opacity:0;transform: translateX(.5em);} to { opacity:1; transform: translateX(0em); }
+}
+
 .post--home{
   height: 25em;
   position: relative;
@@ -118,13 +127,28 @@ nav{
     line-height: 0.9em;
     padding-bottom: 0.5em;
     padding-left: 0.3em;
-    text-transform: capit;
+    text-transform: capitalize;
     position: absolute;
     bottom: 0;
     z-index: 20;
+    opacity: 0;
+    transform: translateX(.7em);
     text-transform: lowercase;
+    animation:fadeInSlide ease-out 1;
+      animation-fill-mode:forwards;
+       animation-duration:.7s;
+  }
+
+  .chip{
+    position: relative;
+    z-index: 20;
+    top: 1em;
+    left: 1em;
   }
 }
+
+
+
 
 
 
