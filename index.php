@@ -9,7 +9,20 @@ $result = $db_connection->query('SELECT * FROM Post');
 
 ?>
 <section id="home">
-  <main class="container">
+<div class="row">
+    <div class="col s12 banner">
+     <!--  <div class="overlay"></div> -->
+
+       <div class="row">
+        <h1 class="site-title center-align">FEEDME</h1>
+        <h4 class="site-title sub center-align">a collection of wonderful foodie experiences</h4>
+      </div>
+      </div>
+    </div>
+  <main class="container main-content">
+  <div class="row">
+    <h5>recent posts</h5>
+  </div>
     <div class="row">
       <!-- use to gran individual information from each post -->
       <?php while ($item = $result->fetch_assoc()): ?>
@@ -30,7 +43,7 @@ $result = $db_connection->query('SELECT * FROM Post');
 
               <?php else: ?>
 
-                <div class="post--home" style="background-image:url(uploads/panda.jpg">
+                <div class="post--home" style="background-image:url(images/placeholder.jpg">
 
                 <?php endif; ?>
 

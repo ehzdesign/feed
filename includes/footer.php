@@ -18,6 +18,17 @@
 
   </div>
 
+  <!-- footer -->
+
+   <footer class="page-footer grey darken-2">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 4Pixels  -  Erick Hernandez
+            </div>
+          </div>
+        </footer>
+  <!-- end of footer -->
+
 
   <script type="text/javascript" src="<?php echo BASE_URL; ?>js/bin/materialize.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpF73qCXwqPRA-wuYhzcHmvxTGDgXJ-c4&libraries=places"></script>
@@ -66,6 +77,7 @@
 
     $('.materialize-textarea').val(my_var);
     $('.materialize-textarea').trigger('autoresize');
+
 
   </script>
 

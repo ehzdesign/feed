@@ -88,11 +88,12 @@ $post_user = $user_result->fetch_assoc();
           <!-- price range select -->
           <div class="row">
            <div class="col s12">
-             <p class="range-field">
+
                <!-- <i class="material-icons prefix">attach_money</i> -->
                <label for="price-range">How much did it cost?</label>
-               <input name="f_price" type="range" value="<?php echo $item['price']; ?> " id="price-range" min="0" max="100" />
-             </p>
+
+              <input name="f_price" class="validate" type="text" value="<?php echo $item['price']; ?> " id="price-range"/>
+
            </div>
          </div>
 
