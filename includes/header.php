@@ -10,11 +10,12 @@
   <link type="text/css" rel="stylesheet" href="<?php echo BASE_URL; ?>dist/style/main.css"  media="screen,projection"/>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
  <nav class="main-nav">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">yum<strong>me</strong></a>
+    <a href="#" class="brand-logo">FEED<strong>ME</strong></a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>

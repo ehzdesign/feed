@@ -48,7 +48,7 @@ $post_user = $user_result->fetch_assoc();
 <!-- get title of post -->
 
 
-<main class="container main-content">
+<main class="container main-content single-post">
   <div class="row">
     <div class="col s12 l6">
     <div class="chip grey lighten-4">

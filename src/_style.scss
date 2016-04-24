@@ -29,7 +29,10 @@ nav ul{
 
 nav{
   @extend .z-depth-1;
+  padding: 0 2%;
 }
+
+
 
 
 /*=====  End of nav styles  ======*/
@@ -41,26 +44,27 @@ nav{
 .main-content{
   padding: 10% 0;
 }
+.single-post{
 
+  .chip{
+
+    margin-bottom: 2em;
+  }
+}
 .post-details {
 
   h1{
     text-transform: lowercase;
     font-size: 5em;
-    margin-bottom: 1em;
     font-weight: bold;
 
   }
 
-  .chip{
-    font-weight: 300;
-    margin-bottom: 2em;
-  }
 
   .location,
   .price{
     @extend .grey-text, .text-lighten-2;
-    font-size: .8em;
+    font-size: .9em;
   }
 
   .location{
@@ -69,7 +73,7 @@ nav{
 
     .body{
       margin-top: 3em;
-      @extend .grey-text;
+      font-size: 1.2em;
     }
 }
 @media #{$large-and-up} {
@@ -193,6 +197,7 @@ nav{
 
 
 
+
     i{
       font-size: 3em;
       color: #fff;
@@ -237,6 +242,14 @@ nav{
     }
   }
 }
+
+.admin-main{
+  padding-top: 5em;
+}
+
+ .post-container{
+      margin-top: 3em;
+    }
 
 
 /*=====  End of admin styles  ======*/

@@ -19,18 +19,20 @@
   </div>
 
 
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="<?php echo BASE_URL; ?>js/bin/materialize.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpF73qCXwqPRA-wuYhzcHmvxTGDgXJ-c4&libraries=places"></script>
 
   <script>
+    $( document ).ready(function() {
     //make flyout nav work
     $(".button-collapse").sideNav();
+
+
       //location autocomplete google places
       var input = document.getElementById('pac-input');
       var autocomplete = new google.maps.places.Autocomplete(input);
 
+      //set preview image of post
       function readURL(input) {
 
         if (input.files && input.files[0]) {
@@ -48,20 +50,24 @@
         readURL(this);
       });
 
+      //set hover effect on post items on home and admin page
       var elems = $('.col--home');
       elems.on('mouseenter mouseleave', function(e) {
         elems.not(this).stop(true).fadeTo('fast', e.type=='mouseenter'?0.7:1);
       });
 
-       $('.edit-profile-image-modal').leanModal();
+      $('.edit-profile-image-modal').leanModal();
 
-       var my_var = <?php echo $item['body']; ?>;
+    });
 
-  $('materialize-textarea').val(my_var);
-  $('materialize-textarea').trigger('autoresize');
+    //set value for text area on edit post for body of post
 
+    var my_var = "<?php echo $item['body']; ?>";
 
-    </script>
+    $('.materialize-textarea').val(my_var);
+    $('.materialize-textarea').trigger('autoresize');
 
-  </body>
-  </html>
+  </script>
+
+</body>
+</html>

@@ -60,18 +60,18 @@ $result = $statement->get_result();
         </div>
   </div>
 </div>
-  <main class="container main-content">
+  <main class="container admin-main">
 
        <div class="row">
           <a class="new-post-link" href="add-post.php">+ add new post</a>
        </div>
     </div>
-    <div class="row">
+    <div class="row post-container">
 
 
      <?php while ($item = $result->fetch_assoc()): ?>
 
-      <a href="edit-post.php?ID=<?php echo $item['ID'] ?>">
+      <a href="../post.php?ID=<?php echo $item['ID'] ?>">
 
 
         <div class="col s12 m6 l4 col--home">
@@ -126,8 +126,8 @@ $result = $statement->get_result();
          </div>
 
          <div class="post-actions col s12">
-          <a href="edit-post.php?ID=<?php echo $item['ID'] ?>"class="waves-effect waves-light btn edit"><i class="material-icons left">mode_edit</i>edit</a>
-          <a href=""class="waves-effect waves-light btn delete"><i class="material-icons left">delete_forever</i>delete</a>
+            <a href="edit-post.php?ID=<?php echo $item['ID'] ?>"class="waves-effect waves-light btn edit"><i class="material-icons left">mode_edit</i>edit</a>
+           <a href="../forms/delete-action.php?ID=<?php echo $item['ID']; ?>"class="waves-effect waves-light btn delete"><i class="material-icons left">delete_forever</i>delete</a>
         </div>
       </div>
 
