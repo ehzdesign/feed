@@ -30,6 +30,7 @@ $item = $result->fetch_assoc();
 
 <?php
 
+//query user table
 $statement = $db_connection->prepare(
 
   "SELECT * FROM users WHERE ID =?"

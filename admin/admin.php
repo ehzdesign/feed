@@ -124,14 +124,17 @@ $result = $statement->get_result();
            </div>
 
          </div>
-
-         <div class="post-actions col s12">
+  <div class="post-actions col s12">
             <a href="edit-post.php?ID=<?php echo $item['ID'] ?>"class="waves-effect waves-light btn edit"><i class="material-icons left">mode_edit</i>edit</a>
            <a href="../forms/delete-action.php?ID=<?php echo $item['ID']; ?>"class="waves-effect waves-light btn delete"><i class="material-icons left">delete_forever</i>delete</a>
         </div>
+
       </div>
 
+
     </a>
+
+
 
 
   <?php endwhile; ?>
