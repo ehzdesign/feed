@@ -1,5 +1,6 @@
 <?php require_once('../includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
+<?php  include('../admin/login-check.php'); ?>
 <?php include(ROOT_PATH . 'database/database-connect.php') ?>
 
 

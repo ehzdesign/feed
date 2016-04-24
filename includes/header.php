@@ -32,7 +32,7 @@
 
 
 
-        <?php while ($item = $result->fetch_assoc()): ?>
+        <?php $item = $result->fetch_assoc(); ?>
 
 
 
@@ -43,7 +43,7 @@
         </a>
       </div>
 
-    <?php endwhile; ?>
+
 
       <!-- delay logout until toast message goes away -->
       <li><a onclick="Materialize.toast('see ya later!', 2000,'',function(){location.href = '<?php echo BASE_URL; ?>forms/logout-action.php';})">Logout</a></li>
@@ -70,9 +70,12 @@
 
 
 
+
     <div class="chip grey lighten-4">
-     <img class="responsive-img" src="uploads/profile.png" alt="profile image">
+    <a class="profile-side-nav" href="<?php echo BASE_URL; ?>admin/admin.php">
+     <img class="responsive-img" src="uploads/user_image/<?php echo $item['profile_image']; ?>" alt="profile image">
      <?php echo '@'.$_SESSION['username'] ?>
+     </a>
    </div>
 
    <li><a href="<?php echo BASE_URL; ?>login.php">Logout</a></li>

@@ -309,4 +309,34 @@ nav{
 
 /*=====  End of admin styles  ======*/
 
+#add-post.main-content{
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  .material-placeholder{
+    margin-bottom: 5em;
+  }
+}
+
+
+/*==================================
+=            login form            =
+==================================*/
+
+.login-form{
+  margin-top: 10em;
+}
+
+/*=====  End of login form  ======*/
+
+
+/*============================
+=            hack            =
+============================*/
+
+.side-nav a{
+  line-height: inherit;
+}
+
+/*=====  End of hack  ======*/
 

@@ -79,7 +79,7 @@ $post_user = $user_result->fetch_assoc();
 
           <div class="row">
             <div class="input-field col s12">
-              <!-- <i class="material-icons prefix">location_on</i> -->
+
               <input id="id" name="f_id" type="hidden" value="<?php echo $item['ID'] ?>">
             </div>
           </div>
@@ -89,9 +89,8 @@ $post_user = $user_result->fetch_assoc();
           <div class="row">
            <div class="col s12">
 
-               <!-- <i class="material-icons prefix">attach_money</i> -->
-               <label for="price-range">How much did it cost?</label>
 
+               <label for="price-range">How much did it cost?</label>
               <input name="f_price" class="validate" type="text" value="<?php echo $item['price']; ?> " id="price-range"/>
 
            </div>
@@ -101,7 +100,6 @@ $post_user = $user_result->fetch_assoc();
 
          <div class="row">
           <div class="input-field col s12">
-            <!-- <i class="material-icons prefix">location_on</i> -->
             <input id="pac-input" name="f_location" placeholder="enter location" value="<?php echo $item['location']; ?> " type="text" class="validate controls">
             <label for="pac-input">Location</label>
           </div>

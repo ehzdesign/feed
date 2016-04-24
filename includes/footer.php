@@ -23,7 +23,7 @@
    <footer class="page-footer grey darken-2">
           <div class="footer-copyright">
             <div class="container">
-            © 2016 4Pixels  -  Erick Hernandez
+            © <?php echo date('Y') ?> 4Pixels  -  Erick Hernandez
             </div>
           </div>
         </footer>

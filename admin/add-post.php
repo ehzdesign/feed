@@ -4,7 +4,7 @@
 <?php include(ROOT_PATH . 'database/database-connect.php') ?>
 
 
-<section id="add post">
+<section id="add-post" class="main-content">
 
   <div class="container">
 
@@ -15,7 +15,7 @@
 
 
    <div class="row">
-    <form action="<?php echo BASE_URL; ?>forms/add-action.php" method="post" enctype="multipart/form-data">
+    <form class="col s12 m6 offset-m3" action="<?php echo BASE_URL; ?>forms/add-action.php" method="post" enctype="multipart/form-data">
       <!-- upload image for post -->
       <div class="file-field input-field">
         <div class="btn">
@@ -31,11 +31,8 @@
       <!-- price range select -->
       <div class="row">
        <div class="col s12">
-         <p class="range-field">
-           <!-- <i class="material-icons prefix">attach_money</i> -->
-           <label for="price-range">How much did it cost?</label>
-           <input name="f_price" type="range" id="price-range" min="0" max="100" />
-         </p>
+          <label for="price-range">How much did it cost? (do not include '$')</label>
+              <input name="f_price" class="validate" type="text"  id="price-range"/>
        </div>
      </div>
 

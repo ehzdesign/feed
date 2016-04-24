@@ -2,6 +2,7 @@
 require_once('../includes/config.php');
 //check directory path
 include(ROOT_PATH . 'database/database-connect.php');
+ include('../admin/login-check.php');
 
 // $target_path = getcwd() . '/uploads/';
 // $target_path = $target_path . basename( $_FILES['f_image']['name']);

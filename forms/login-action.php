@@ -1,6 +1,9 @@
 <?php
   include('../includes/config.php');
   include(ROOT_PATH . 'database/database-connect.php');
+   // include('../admin/login-check.php');
+
+
 
 
   //load user with matching username
@@ -40,6 +43,7 @@
 
       $_SESSION['username'] = $user['username'];
       $_SESSION['user_id'] = $user['id'];
+      $_SESSION['role'] = $user['role'];
 
 
       //redirect to admin

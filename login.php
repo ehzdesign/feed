@@ -1,12 +1,13 @@
 <?php require_once('includes/config.php') ?>
 <?php include(ROOT_PATH . 'includes/header.php') ?>
 
-
+<main>
 <div class="row">
 
-  <div class="col s12">
+  <div class="container">
 
-    <form action="<?php echo BASE_URL; ?>forms/login-action.php" method="post">
+
+    <form class="col s12 m6 offset-l3 login-form" action="<?php echo BASE_URL; ?>forms/login-action.php" method="post">
 
       <div class="row">
 
@@ -56,7 +57,7 @@
 </div>
 
 
-
+</main>
 
 
 

@@ -11,12 +11,21 @@
 
 <?php
 
+if($_SESSION['role'] == 0){
+
+
 $statement = $db_connection->prepare("SELECT * FROM Post WHERE user_id =?");
 
 $statement->bind_param(
   "s" ,  //Type of data (i = integer, d=decimal, s = string)
   $_SESSION['user_id'] //value to replace ? with
   );
+
+}
+
+else{
+  $statement = $db_connection->prepare("SELECT * FROM Post");
+}
 
  //run sql query
 $statement->execute();
@@ -27,15 +36,19 @@ $result = $statement->get_result();
 ?>
 <?php
 
-$statement = $db_connection->prepare(
 
-  "SELECT * FROM users WHERE ID =?"
+
+  $statement = $db_connection->prepare(
+
+    "SELECT * FROM users WHERE ID =?"
+    );
+
+  $statement->bind_param(
+     "s" ,  //Type of data (i = integer, d=decimal, s = string)
+      $_SESSION['user_id'] //value to replace ? with
   );
 
-$statement->bind_param(
-                    "s" ,  //Type of data (i = integer, d=decimal, s = string)
-                    $_SESSION['user_id'] //value to replace ? with
-                    );
+
 
 $statement->execute();
 
@@ -167,6 +180,8 @@ $profile = $user_result->fetch_assoc();
 
     </form>
   </div>
+
+</div>
 
 </div>
 

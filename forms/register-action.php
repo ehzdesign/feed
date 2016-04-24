@@ -2,6 +2,7 @@
 
 include('../includes/config.php');
 include(ROOT_PATH . 'database/database-connect.php');
+ include('../admin/login-check.php');
 
 
 if(isset($_POST['register']))
