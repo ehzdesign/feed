@@ -90,13 +90,15 @@ nav{
   margin-top: 1.3125em;
 }
 
-.post-container--home{
+.post-container--home, #admin{
 
   overflow: hidden;
   position: relative;
     .overlay{
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.77), rgba(45, 45, 45, 0.04));
     position: absolute;
     z-index: 10;
@@ -153,4 +155,90 @@ nav{
 
 
 /*=====  End of post-home  ======*/
+
+/*====================================
+=            admin styles            =
+====================================*/
+
+.post-actions{
+  margin-top: 1em;
+  .delete{
+    @extend .grey, .darken-3;
+  }
+  .edit{
+    background-color: #fff;
+    color:#424242;
+  }
+}
+
+#admin{
+  .profile-img{
+    margin: 0 auto;
+    width: 12em;
+    height:12em;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    border: 3px solid white;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover i{
+      opacity:1;
+    }
+
+
+
+
+    i{
+      font-size: 3em;
+      color: #fff;
+      opacity:0;
+      transition: all .3s ease;
+      cursor: pointer;
+    }
+
+    a{
+      align-self:center;
+    }
+  }
+
+  .new-post-link{
+    font-size: 1.4em;
+    color: #242424;
+    letter-spacing: .1em;
+    &:hover{
+      text-decoration: line-through;
+    }
+  }
+
+  .banner{
+    height: 30em;
+    background-color: #fff;
+    background-image: url('../../uploads/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .username{
+      color: white;
+      z-index: 20;
+      position: relative;
+      font-size: 2.6em;
+      letter-spacing: .1em;
+    }
+  }
+}
+
+
+/*=====  End of admin styles  ======*/
+
 

@@ -53,6 +53,13 @@
         elems.not(this).stop(true).fadeTo('fast', e.type=='mouseenter'?0.7:1);
       });
 
+       $('.edit-profile-image-modal').leanModal();
+
+       var my_var = <?php echo $item['body']; ?>;
+
+  $('materialize-textarea').val(my_var);
+  $('materialize-textarea').trigger('autoresize');
+
 
     </script>
 

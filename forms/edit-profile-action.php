@@ -83,7 +83,7 @@ $statement->bind_param("ss", $filename, $_SESSION['user_id']);
 
 $statement->execute();
 
-
+header("location:../admin/admin.php");
 
  ?>
 
