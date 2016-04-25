@@ -20,7 +20,7 @@
       <div class="file-field input-field">
         <div class="btn">
           <span>image</span>
-          <input id="image" name="f_image" type="file" accept="image/*" placeholder="upload your food image" required>
+          <input id="image" name="f_image" type="file" accept="image/*" placeholder="upload your food image!" required>
         </div>
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text" placeholder="Upload your foodie image!">

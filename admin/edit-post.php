@@ -130,7 +130,7 @@ $post_user = $user_result->fetch_assoc();
           <!-- body for post -->
           <div class="input-field col s12">
             <!-- <i class="material-icons prefix">insert_comment</i> -->
-            <textarea id="body" name="f_body" class="materialize-textarea"  length="120" ></textarea>
+            <textarea id="body" name="f_body" class="materialize-textarea"  length="120" ><?php echo $item['body']; ?></textarea>
             <label for="body">Share your experience!</label>
           </div>
         </div>

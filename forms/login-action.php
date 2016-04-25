@@ -6,6 +6,7 @@
 
 
 
+
   //load user with matching username
   $statement = $db_connection->prepare(
     "SELECT * FROM users WHERE username =?"

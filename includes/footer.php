@@ -45,19 +45,20 @@
 
       //set preview image of post
       function readURL(input) {
-
+          console.log('boom');
         if (input.files && input.files[0]) {
           var reader = new FileReader();
 
           reader.onload = function (e) {
             $('#preview').attr('src', e.target.result);
+            console.log(e.target.result);
           }
 
           reader.readAsDataURL(input.files[0]);
         }
       }
 
-      $("#image").change(function(){
+      $(document).on('change', '#image', function(){
         readURL(this);
       });
 
@@ -69,15 +70,12 @@
 
       $('.edit-profile-image-modal').leanModal();
 
-    });
 
     //set value for text area on edit post for body of post
 
-    var my_var = "<?php echo $item['body']; ?>";
 
-    $('.materialize-textarea').val(my_var);
-    $('.materialize-textarea').trigger('autoresize');
 
+    });
 
   </script>
 

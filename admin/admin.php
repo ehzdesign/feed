@@ -34,6 +34,7 @@ $result = $statement->get_result();
 
 
 ?>
+
 <?php
 
 
@@ -82,7 +83,7 @@ $profile = $user_result->fetch_assoc();
 <div class="row post-container">
 
 
- <?php while ($item = $result->fetch_assoc()): ?>
+ <?php while (!empty($item = $result->fetch_assoc())): ?>
 
   <a href="../post.php?ID=<?php echo $item['ID'] ?>">
 
